@@ -1,0 +1,44 @@
+* reset ================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+// トップ
+.top-wrapper {
+    background-image:url("public/books.jpg");
+    background-size:cover;
+    height:1000px;
+}
+

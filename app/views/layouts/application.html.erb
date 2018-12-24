@@ -8,8 +8,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
+<body>
+    <header>
+      <div class = "header-left">
+         Book Shelf
+      </div>
+      <div class = "header-right">
+        <ul>
+          <li>新規登録</li>
+          <li>ログイン</li>
+        </ul>
+      </div>
+     </header>
     <%= yield %>
+
   </body>
+   <footer>
+      <small>@Book Shelf 2019 Takaya Sugiyama</small>
+</footer>
 </html>

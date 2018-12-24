@@ -1,0 +1,16 @@
+<div class = "user-show">
+     <div >
+        <% if @error_massage %>
+            <%= @error_massage %>
+        <% end %>
+     </div>
+     <%= form_tag("/users/login" ,{method: "post"}) do %>
+    <div class = "user-form">
+        <p>メールアドレス</p>
+        <input name = "email">
+        <p>パスワード</p>
+        <input name = "password" type = "password">
+      </div>
+    <input type = "submit" value = "login" class  = "user-submit">
+    <% end %>
+</div>

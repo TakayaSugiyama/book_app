@@ -11,12 +11,17 @@
 <body>
     <header>
       <div class = "header-left">
-         Book Shelf
+         <%= link_to("Book Shelf","/" ) %>
       </div>
       <div class = "header-right">
         <ul>
-          <li>新規登録</li>
-          <li>ログイン</li>
+         <% if @current_user %>
+            <li><%= link_to("マイページ", "/users/show/#{@current_user.id}")  %></li>
+            <li><%= link_to("ログアウト","/users/logout",{method: 'post'})  %></li>
+         <% else %>
+             <li><%= link_to("新規登録" ,"/users/signup")  %></li>
+             <li><%= link_to("ログイン","/users/login_form" )   %></li>
+         <% end %>
         </ul>
       </div>
      </header>

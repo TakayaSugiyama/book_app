@@ -1,0 +1,22 @@
+<div class = "user-show">
+      <div >
+        <% if @user.errors.full_messages %>
+          <% @user.errors.full_messages.each do |error_massage| %>
+             <p ><%= error_massage %></p>
+          <% end %>
+        <% end %>
+     </div>
+    <%= form_tag("/users/create",{method: "post"})  do %>
+       <div class = "user-form">
+         <p>ユーザー名</p>
+          <input name = "name">
+          <p>メールアドレス</p>
+         <input name = "email">
+         <p>パスワード</p>
+         <input type = "password" name = "password">
+         <p>パスワード(確認)</p>
+         <input type = "password" name = "confirmation_password">
+      </div>
+        <input type = "submit" value = "signup" class ="user-submit">
+    <% end %>
+</div>

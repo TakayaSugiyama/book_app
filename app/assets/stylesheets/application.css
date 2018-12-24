@@ -1,4 +1,4 @@
-/* リセット*/
+/* reset */
 html {
   font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
   line-height: 1.7;
@@ -31,12 +31,12 @@ form input[type="submit"] {
   cursor: pointer;
 }
 
-/* 共通 */
+/* all */
 body {
     text-align:center;
 }
 
-/* トップ*/
+/* top */
 .top{
    padding-top:100px;
    padding-bottom:100px;
@@ -56,7 +56,7 @@ body {
 }
 
 
-/* ヘッダー　　*/
+/* header　　*/
 header{
   background-color:rgba(0,0,0,0.9);
   padding:20px 0;
@@ -68,24 +68,32 @@ header{
   color:#fff;
 }
 
-.header-left {
+.header-left a{
   float:left;
   font-size:30px;
   font-weight:bold;
   padding:0 30px;
+  color:#fff;
 }
 
 .header-right {
   float:right;
-  
+  margin-right:20px;
 }
 
 .header-right li {
   float:left;
-  padding:0 25px;
+  padding:0 15px;
+}
+.header-right li  a {
+  color:#fff;
+  opacity: 0.6;
+}
+.header-right li  a:hover{
+  opacity: 1.0
 }
 
-/*  フッター　*/
+/* footer　*/
 footer {
   padding:20px 0;
   background:#151515;
@@ -94,3 +102,33 @@ footer {
   bottom:0;
   color:#fff;
 }
+
+/* users　*/
+.user-show {
+  padding-top:100px;
+}
+
+/* users/signup  users/login_form */
+
+.user-form  input{
+  margin-bottom: 20px;
+  padding:10px 0;
+  width:40%;
+}
+
+.user-submit {
+  margin-top:40px;
+  padding:20px 40px;
+  background-color:#3300CC;
+  color:#fff;
+  font-size:17px;
+  box-shadow: 1px 3px #333399;
+}
+
+.user-form  {
+  margin-top: 50px;
+}
+
+
+
+

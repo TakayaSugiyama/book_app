@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'books/index' => "books#index"
-  
+  post 'books/add' => "books#create"
+  post 'books/destroy/:id'  => 'books#destroy'
   post 'users/create' => "users#create"
   post 'users/logout'  => 'users#logout'
   post 'users/login'  => 'users#login'

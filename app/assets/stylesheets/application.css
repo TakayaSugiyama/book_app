@@ -130,6 +130,22 @@ footer {
   margin-top: 50px;
 }
 
+/* users/show  */
+.user-booklist {
+  margin-top:100px;
+}
+
+.book-list {
+  float:left;
+  width:25%;
+  margin-bottom:160px;
+}
+
+.book-list p {
+  font-size:8px;
+  width:100%;
+}
+
 /*  books */
 .books-form {
   padding-top:100px;
@@ -159,6 +175,26 @@ footer {
 .book-search {
   width:80%;
 }
+
+.book-table input {
+  padding:10px 20px;
+  margin:10px 0;
+}
+
+.search-submit,.book-add
+{margin-top:40px;
+  padding:5px 40px;
+  background-color:#3300CC;
+  color:#fff;
+  font-size:17px;
+  box-shadow: 1px 3px #333399;
+  margin-left:20px;
+}
+
+.search-box {
+  padding:10px;
+}
+
 
 
 

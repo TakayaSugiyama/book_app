@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user  = User.find_by(id: params[:id])
+    @books = Book.where(user_id: @user.id)
   end
   
   def signup
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
   end
   
   def create
-      @user = User.new(email: params[:email],name: params[:name],password: params[:password])
+      @user = User.new(email: params[:email],name: params[:name],password: params[:password],user_image_name:"cat.png")
     
     if params[:password] == params[:confirmation_password] && @user.save
       @user.save

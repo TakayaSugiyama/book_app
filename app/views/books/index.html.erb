@@ -1,8 +1,8 @@
 <div class = "books-form">
    <%= form_tag("/books/index" ,{method: "get"}) do %>
       　<label>タイトル検索</label>
-        <%= text_field_tag 'keyword', params[:keyword] %>
-        <%= submit_tag "検索" %>
+        <input name = "keyword" class = "search-box"　align="left"></input>
+        <input type = "submit" value = "検索する"class = "search-submit" >
   <% end %>
  <div class = "book-search">
   <table class = "book-table">
@@ -10,6 +10,7 @@
        <tr>
          <th>本の画像</th>
          <th>本のタイトル</th>
+         <th>追加</th>
        </tr>
      </thead>
   　 <tbody>
@@ -18,6 +19,13 @@
       <tr>
         <td><img src = "<%= item["largeImageUrl"] %>"></td>
          <td ><%= item.title  %></td>
+         <td>
+             <%= form_tag("/books/add", {method: "post"}) do %>
+                 <p>登録名:<input value = "<%= item.title %>" name ="title"></p>
+                 <p>ISBNコード:<input value = "<%= item.isbn %>" name = "isbn"></p>
+                 <input value = "追加する" type = "submit" class = "book-add">
+             <% end %>
+         </td>
        </tr>
     <% end %>
   <% end %>

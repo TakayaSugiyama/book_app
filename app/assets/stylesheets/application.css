@@ -34,6 +34,7 @@ form input[type="submit"] {
 /* all */
 body {
     text-align:center;
+    margin:0;
 }
 
 /* top */
@@ -98,9 +99,9 @@ footer {
   padding:20px 0;
   background:#151515;
   width:100%;
+  color:#fff;
   position:fixed;
   bottom:0;
-  color:#fff;
 }
 
 /* users　*/
@@ -128,6 +129,39 @@ footer {
 .user-form  {
   margin-top: 50px;
 }
+
+/*  books */
+.books-form {
+  padding-top:100px;
+  padding-bottom:200px;
+  padding-left:30px;
+}
+
+/* books/index  */
+.book-table {
+  border:solid 2px #000;
+}
+
+.book-table td {
+  border:solid 1px #000;
+  padding:30px;
+}
+
+.book-table th {
+  border:solid 1px #000;
+}
+
+.book-table th{/*thに対して*/
+  color: #FF9800;/*文字色*/
+  background: #fff5e5;/*背景色*/
+}
+
+.book-search {
+  width:80%;
+}
+
+
+
 
 
 

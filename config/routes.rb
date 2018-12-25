@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'books/index' => "books#index"
+  
   post 'users/create' => "users#create"
   post 'users/logout'  => 'users#logout'
   post 'users/login'  => 'users#login'

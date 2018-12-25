@@ -1,0 +1,27 @@
+<div class = "books-form">
+   <%= form_tag("/books/index" ,{method: "get"}) do %>
+      　<label>タイトル検索</label>
+        <%= text_field_tag 'keyword', params[:keyword] %>
+        <%= submit_tag "検索" %>
+  <% end %>
+ <div class = "book-search">
+  <table class = "book-table">
+    <thead>
+       <tr>
+         <th>本の画像</th>
+         <th>本のタイトル</th>
+       </tr>
+     </thead>
+  　 <tbody>
+  <% if @items.present? %>
+     <% @items.each do |item| %>
+      <tr>
+        <td><img src = "<%= item["largeImageUrl"] %>"></td>
+         <td ><%= item.title  %></td>
+       </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+</div>
+</div>

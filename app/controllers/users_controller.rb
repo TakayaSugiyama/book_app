@@ -33,11 +33,28 @@ class UsersController < ApplicationController
     
     if params[:password] == params[:confirmation_password] && @user.save
       @user.save
-      redirect_to("/users/show")
+      redirect_to("/users/show/#{@user.id}")
+      session[:user_id] = @user.id
     else
       render("users/signup")
     end
     
+  end
+  
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+  
+  def update
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.password = params[:password]
+    if  @user.save
+      redirect_to("/users/show/#{@user.id}")
+    else
+      render("users/edit")
+    end
   end
   
   

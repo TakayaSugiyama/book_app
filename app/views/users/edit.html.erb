@@ -1,0 +1,21 @@
+<div class = "user-show">
+    <h1>ユーザー情報の変更</h1>
+     <% if @user.errors.full_messages %>
+          <% @user.errors.full_messages.each do |error_massage| %>
+             <p ><%= error_massage %></p>
+          <% end %>
+        <% end %>
+     <%= form_tag("/users/update/#{@user.id}",{method: "post"})  do %>
+       <div class = "user-form">
+         <p>ユーザー名</p>
+          <input name = "name" value = "<%= @user.name   %>">
+          <p>メールアドレス</p>
+         <input name = "email" value = "<%= @user.email  %>" >
+         <p>ユーザー画像</p>
+         <input type = "file">
+         <p>パスワード</p>
+         <input type = "password" name = "password" >
+      </div>
+        <input type = "submit" value = "update" class ="user-submit">
+    <% end %>
+</div>

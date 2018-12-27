@@ -5,14 +5,14 @@
              <p ><%= error_massage %></p>
           <% end %>
         <% end %>
-     <%= form_tag("/users/update/#{@user.id}",{method: "post"})  do %>
+     <%= form_tag("/users/update/#{@user.id}",{method: "post" ,multipart: true})  do %>
        <div class = "user-form">
          <p>ユーザー名</p>
           <input name = "name" value = "<%= @user.name   %>">
           <p>メールアドレス</p>
          <input name = "email" value = "<%= @user.email  %>" >
          <p>ユーザー画像</p>
-         <input type = "file">
+         <input type = "file" name = "image">
          <p>パスワード</p>
          <input type = "password" name = "password" >
       </div>

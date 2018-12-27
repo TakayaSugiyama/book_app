@@ -50,12 +50,19 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.email = params[:email]
     @user.password = params[:password]
+    
+    if params[:image]
+      @user.user_image_name = "#{@user.id}.png"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.user_image_name}", image.read)
+    else 
+      @user.user_image_name = "cat.png"
+    end
+    
     if  @user.save
-      redirect_to("/users/show/#{@user.id}")
-    else
-      render("users/edit")
+         redirect_to("/users/show/#{@user.id}")
+      else
+          render("users/edit")
     end
   end
-  
-  
 end

@@ -1,6 +1,6 @@
 <div class = "user-show">
     <h1><%= @user.name   %>の本棚です。</h1>
-    <img src = "/<%= "#{@user.user_image_name}" %>" width = 200px,height = 200px;>
+    <img src = "/user_images/<%= "#{@user.user_image_name}" %>" width = 200px,height = 200px;>
      <%= link_to("ユーザー情報の変更","/users/edit/#{@user.id}")  %>
     <div class = "user-booklist">
         <% @books.each do |book|  %>

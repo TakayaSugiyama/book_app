@@ -146,6 +146,9 @@ footer {
   font-size:8px;
   width:100%;
 }
+.book-list a {
+  color: skyblue;
+}
 
 /*  books */
 .books-form {
@@ -196,6 +199,35 @@ footer {
   padding:10px;
 }
 
+/* posts/create_form  */
+.post-create {
+  padding:100px 0;
+  margin:0 auto;
+}
+
+.post-create img{
+  margin:30px 0;
+}
+
+.post-create textarea {
+  height: 200px;
+  width:400px;
+  font-size:15px;
+  border:solid 2px #000;
+}
+
+.post-submit {
+  width:30%;
+  height:50px;
+  color:#fff;
+  background-color:#6666FF;
+  box-shadow:0 5px blue;
+}
+.post-submit:active {
+  box-shadow: none;
+  position:relative;
+  top:7px;
+}
 
 
 

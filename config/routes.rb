@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   get 'users/show/:id'  => "users#show"
   get '/' => "home#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'posts/index' => "posts#index"
+  get 'posts/create_form/:id' => "posts#create_form"
+  post 'posts/create/:id'  => 'posts#create'
   
 end

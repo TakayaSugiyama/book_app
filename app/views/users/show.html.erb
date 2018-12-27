@@ -10,7 +10,7 @@
                <% @bit_url = @bit_url_ex[-4] + @bit_url_ex[-3] + @bit_url_ex[-2] + @bit_url_ex[-1] %>
                <img src = "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/<%= @bit_url %>/<%= book.book_image_name  %>.jpg?_ex=200x200">
                 <p><%= book.book_title %></p>
-                <%= link_to("感想を投稿する")  %>
+                <%= link_to("感想を投稿する","/posts/create_form/#{book.id}")  %>
                 <%= link_to("削除","/books/destroy/#{book.id}",{method:"post"})   %>
            </div>
         <%  end %>

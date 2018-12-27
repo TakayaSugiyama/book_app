@@ -1,0 +1,21 @@
+<div class = "post-create">
+      <p><%= @book.book_title  %>"</p>
+     <!--本の画像-->
+     <% @bit_url_ex = @book.book_image_name.split('')  %>
+     <% @bit_url = @bit_url_ex[-4] + @bit_url_ex[-3] + @bit_url_ex[-2] + @bit_url_ex[-1] %>
+     <img src = "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/<%= @bit_url %>/<%= @book.book_image_name  %>.jpg?_ex=200x200">
+     <!--エラーメッセージ-->
+     <% if @error_massage %>
+             <p ><%= @error_massage %></p>
+　　　 <% end %>
+     <!--エラーメッセージここまで-->
+     
+    <%= form_tag("/posts/create/#{@book.id}") do %>
+      <div class = "create-form">
+         <textarea maxlength = 160 name = "content">
+         
+          </textarea>
+       <div>
+     <% end %>
+     <input class = "post-submit" type = "submit" value = "post">
+</div>

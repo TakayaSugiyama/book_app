@@ -9,7 +9,6 @@
              <p ><%= @error_massage %></p>
 　　　 <% end %>
      <!--エラーメッセージここまで-->
-     
     <%= form_tag("/posts/create/#{@book.id}") do %>
       <div class = "create-form">
          <textarea maxlength = 160 name = "content">

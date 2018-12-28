@@ -229,6 +229,39 @@ footer {
   top:7px;
 }
 
+/* posts/index   */
+.user-post-image {
+  width:90px;
+  border:solid 1px #000 ;
+  border-radius:50%;
+}
+
+.posts-index {
+  padding:100px 0 200px 0;
+}
+
+.post-item {
+  border:solid 1px #000;
+  width:40%;
+  margin:50px auto;
+  padding:40px;
+}
+
+.post-left {
+  float:left;
+}
+
+.post-right {
+  margin-left:80px;
+  
+  
+}
+.clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
 
 
 

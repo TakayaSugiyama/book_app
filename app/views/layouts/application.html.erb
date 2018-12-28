@@ -17,6 +17,7 @@
         <ul>
          <% if @current_user %>
             <li><%= link_to("マイページ", "/users/show/#{@current_user.id}")  %></li>
+            <li><%= link_to("投稿一覧","/posts/index")   %></li>
             <li><%= link_to("本を探す" ,"/books/index") %></li>
             <li><%= link_to("ログアウト","/users/logout",{method: 'post'})  %></li>
          <% else %>

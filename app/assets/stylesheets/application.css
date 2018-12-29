@@ -262,6 +262,19 @@ footer {
     clear:both;
 }
 
+/*いいね！ボタン*/
+ .fa-heart {
+   margin-top:120px;
+   font-size:20px;
+ }
+ 
+ #unlike-btn {
+   color:#FF99FF;
+ }
+ 
+ #like-btn {
+   color:#808080;
+ }
 
 
 

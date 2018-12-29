@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get 'posts/create_form/:id' => "posts#create_form"
   post 'posts/create/:id'  => 'posts#create'
   
+  post "likes/create/:id"  => "likes#create"
+  post "likes/destroy/:id"  => "likes#destroy"
+  
 end

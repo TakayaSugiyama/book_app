@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  before_action :fordid_not_login_user ,{only: [:edit,:update,:show]}
+  before_action :forbid_not_current_user ,{only: [:edit,:update] }
+  before_action :fordid_login_user ,{only: [:signup,:create]}
+  
+  
   def show
     @user  = User.find_by(id: params[:id])
     @books = Book.where(user_id: @user.id)

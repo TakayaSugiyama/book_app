@@ -1,4 +1,8 @@
 class BooksController < ApplicationController
+before_action :fordid_not_login_user 
+
+
+  
   def index
     if params[:keyword]
       @items = RakutenWebService::Books::Book.search(title: params[:keyword])
@@ -19,5 +23,7 @@ class BooksController < ApplicationController
     @book.destroy
     redirect_to("/users/show/#{@current_user.id}")
   end
+  
+ 
   
 end

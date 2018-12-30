@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+before_action :fordid_not_book_owner,{only: [:create_form,:create]}
+
   def index
     @posts = Post.all.order(id: :desc )
   end
@@ -20,6 +22,16 @@ class PostsController < ApplicationController
   
   def destroy
     
+  end
+  
+  
+   def fordid_not_book_owner
+    @book = Book.find_by(id: params[:id])
+    if @book.user_id ==  @current_user.id
+      
+    else
+      redirect_to("/users/show/#{@current_user.id}")
+    end
   end
   
 end

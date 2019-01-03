@@ -32,6 +32,6 @@ before_action :fordid_not_book_owner,{only: [:create_form,:create]}
     else
       redirect_to("/users/show/#{@current_user.id}")
     end
-  end
+   end
   
 end

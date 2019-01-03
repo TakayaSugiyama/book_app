@@ -40,8 +40,8 @@ body {
 /* top */
 .top{
    padding-top:100px;
-   padding-bottom:100px;
-   background-image:url("/books.jpg");
+   padding-bottom:500px;
+   background-image:url('/books.jpg');
 }
 
 .message {
@@ -238,6 +238,7 @@ footer {
 
 .posts-index {
   padding:100px 0 200px 0;
+  background:	#EEFFFF;
 }
 
 .post-item {
@@ -245,6 +246,7 @@ footer {
   width:40%;
   margin:50px auto;
   padding:40px;
+  background:#fff;
 }
 
 .post-left {

@@ -1,5 +1,15 @@
-<div class = "posts-index">
-   <% @posts.each do |post|  %>
+<div class = "user-show posts-index">
+    <h1><%= @user.name   %>の投稿一覧です。</h1>
+    <img src = "/user_images/<%= "#{@user.user_image_name}" %>" width = 200px,height = 200px;>
+    <% if @current_user.id == params[:id].to_i %>
+       <div class = "user-option-tab">
+           <%= link_to("本棚","/users/show/#{@user.id}") %>
+           <%= link_to("ユーザー情報の変更","/users/edit/#{@user.id}")  %>
+           <%= link_to("自分の投稿一覧",)  %>
+       </div>
+     <% end %>
+    <div class = "user-post-list">
+     <% @posts.each do |post|  %>
       <div class = "post-item  clearfix">
           <%  @book = Book.find_by(id: post.book_image_name) %>
           <%  @user = User.find_by(id: post.user_id)  %>                                    
@@ -22,20 +32,8 @@
           <div class = "post-right">
               <%= post.content %>
           </div>
-           <!--いいね！ボタン-->
-           <% if Like.find_by(user_id: @current_user.id.to_i,post_id: post.id.to_i)  %>
-                <%= link_to("/likes/destroy/#{post.id}",{method: "post"})  do%>
-                  <i class="fas fa-heart" id = "unlike-btn"></i>
-                <% end %>
-           <% else %>
-              <%= link_to("/likes/create/#{post.id}",{method: "post"})  do%>
-                  <i class="fas fa-heart" id = "like-btn"></i>
-              <% end %>
-           <% end %>
-           <!--いいね！の数-->
-           <% count = Like.where(post_id: post.id.to_i).count  %>
-           <span><%=   count  %></span>
       </div>
    <% end %>
     <div class ="clear"></div>
+    </div>
 </div>

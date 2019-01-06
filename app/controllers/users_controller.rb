@@ -70,4 +70,10 @@ class UsersController < ApplicationController
           render("users/edit")
     end
   end
+  
+  def  posts
+     @user  = User.find_by(id: params[:id])
+    @posts = Post.where(user_id: params[:id].to_i)
+  end
+  
 end

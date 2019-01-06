@@ -1,10 +1,14 @@
-<div class = "user-show">
+<div class = "user-show posts-index">
     <h1><%= @user.name   %>の本棚です。</h1>
     <img src = "/user_images/<%= "#{@user.user_image_name}" %>" width = 200px,height = 200px;>
     <% if @current_user.id == params[:id].to_i %>
-     <%= link_to("ユーザー情報の変更","/users/edit/#{@user.id}")  %>
-    <% end %>
-    <div class = "user-booklist">
+       <div class = "user-option-tab">
+            <%= link_to("本棚","/users/show/#{@user.id}") %>
+           <%= link_to("ユーザー情報の変更","/users/edit/#{@user.id}")  %>
+           <%= link_to("自分の投稿一覧","/users/posts/#{@user.id}")  %>
+       </div>
+     <% end %>
+    <div class = "user-booklist ">
         <% @books.each do |book|  %>
            <div class = "book-list">
                <!--本の画像-->

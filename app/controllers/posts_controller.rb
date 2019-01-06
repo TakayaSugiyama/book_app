@@ -21,7 +21,9 @@ before_action :fordid_not_book_owner,{only: [:create_form,:create]}
   end
   
   def destroy
-    
+    @post = Post.find_by(id: params[:id])
+    @post.destroy
+    redirect_to('/posts/index')
   end
   
   

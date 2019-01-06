@@ -133,8 +133,21 @@ footer {
 
 /* users/show  */
 .user-booklist {
-  margin-top:100px;
+  background:	#EEFFFF;
+  padding:50px 0 1000px 0;
 }
+
+.user-option-tab {
+  margin:20px 0;
+}
+
+.user-option-tab a {
+  padding:0 15px;
+  border:solid 1px blue;
+  color:#fff;
+  background-color:blue;
+}
+
 
 .book-list {
   float:left;

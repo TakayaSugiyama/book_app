@@ -4,7 +4,10 @@
           <% @user.errors.full_messages.each do |error_massage| %>
              <p ><%= error_massage %></p>
           <% end %>
-        <% end %>
+     <% end %>
+     <% if @error_massage %>
+       <p><%= @error_massage  %></p>
+     <% end %>
      <%= form_tag("/users/update/#{@user.id}",{method: "post" ,multipart: true})  do %>
        <div class = "user-form">
          <p>ユーザー名</p>

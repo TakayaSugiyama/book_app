@@ -54,7 +54,6 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.email = params[:email]
-    @user.password = params[:password]
     
     if params[:image]
       @user.user_image_name = "#{@user.id}.png"
@@ -64,9 +63,10 @@ class UsersController < ApplicationController
       @user.user_image_name = "cat.png"
     end
     
-    if  @user.save
+    if  @user.save && @user.password == params[:password]
          redirect_to("/users/show/#{@user.id}")
       else
+           @error_massage = "パスワードが違います." 
           render("users/edit")
     end
   end

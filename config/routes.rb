@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post 'users/update/:id'  => 'users#update'
   get 'users/edit/:id'  => "users#edit"
   get 'users/show/:id'  => "users#show"
-  get '/' => "home#index"
+   root "home#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'posts/index' => "posts#index"
   get 'posts/create_form/:id' => "posts#create_form"
